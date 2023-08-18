@@ -1,0 +1,21 @@
+﻿<Window x:Class="Projekat.Potvrda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        Title="Potvrda" Height="350" Width="465" WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="20">
+        <TextBlock Text="Potvrda iznajmljivanja" FontSize="20" FontWeight="Bold" Margin="0 0 0 10"/>
+        <TextBlock Text="{Binding Korisnik}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding Ime}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding Prezime}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding DatumVreme}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding Trajanje}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding UkupnaCena}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding DetaljiBicikla}" FontWeight="Bold" Margin="0 20 0 5"/>
+        <TextBlock Text="{Binding VremeIznajmljivanja}" Margin="0 0 0 5"/>
+        <TextBlock Text="{Binding Napomena}" FontWeight="Bold" Margin="0 20 0 5"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="Projekat.PrijaviOstecenje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        Title="PrijaviOstecenje" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="#F7F7F7">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Prijavite oštećenje bicikla" FontSize="20" Margin="0,0,0,10" HorizontalAlignment="Center" />
+
+            <TextBlock FontSize="15" Text="Izaberite vrstu oštećenja:" Margin="0,10,0,5" HorizontalAlignment="Center" />
+            <ComboBox x:Name="cmbVrstaOstecenja" Width="200" Margin="0,0,0,10" HorizontalAlignment="Center" Grid.Row="2">
+                <ComboBoxItem Content="Volan" Tag="2000" />
+                <ComboBoxItem Content="Kočnice" Tag="3000" />
+                <ComboBoxItem Content="Menjač" Tag="5000" />
+                <ComboBoxItem Content="Ram" Tag="2500" />
+                <ComboBoxItem Content="Sedište" Tag="1500" />
+                <ComboBoxItem Content="Gume" Tag="3500" />
+                <ComboBoxItem Content="Lanac" Tag="5000" />
+            </ComboBox>
+
+            <TextBlock FontSize="15" Text="Molimo vas da opišete oštećenje:" Margin="0,10,0,5" HorizontalAlignment="Center" />
+            <TextBox x:Name="txtOpisOstecenja" Height="80" Width="300" Margin="0,0,0,10" HorizontalAlignment="Center" />
+
+            <TextBlock FontSize="15" Text="Izaberite način plaćanja:" Margin="0,10,0,5" HorizontalAlignment="Center" />
+            <ComboBox x:Name="cmbNacinPlacanja" Width="150" HorizontalAlignment="Center">
+                <ComboBoxItem Content="Gotovina" />
+                <ComboBoxItem Content="Kartica" />
+                <ComboBoxItem Content="Mobilno plaćanje" />
+            </ComboBox>
+
+            <Button Content="Potvrdi" FontSize="15" Click="PrijaviOstecenje_Click" Margin="0,20" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>

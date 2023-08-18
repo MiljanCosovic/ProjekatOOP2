@@ -1,0 +1,35 @@
+﻿<Window x:Class="Projekat.KarticaOsteta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        Title="KarticaOsteta" Height="350" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Background="#F7F7F7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Plaćanje" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"/>
+
+        <TextBlock Text="Unesite broj kartice:" FontSize="20" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="txtBrojKartice" Width="150" Margin="10" HorizontalAlignment="Center" Grid.Row="2"/>
+
+        <TextBlock Text="Unesite PIN:" FontSize="20" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"/>
+        <PasswordBox x:Name="txtPin" Width="150" Margin="10" HorizontalAlignment="Center" Grid.Row="4"/>
+
+        <TextBlock FontSize="18" Text="Cena koju treba platiti:" HorizontalAlignment="Center" Margin="0,10" Grid.Row="5"/>
+        <TextBlock x:Name="txtCena" FontSize="20" HorizontalAlignment="Center" Grid.Row="6"/>
+
+        <Button Content="Plati" Width="100" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Click="PlatiButton_Click"/>
+
+    </Grid>
+</Window>

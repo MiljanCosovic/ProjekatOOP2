@@ -1,0 +1,53 @@
+﻿<Window x:Class="Projekat.FormaZaRent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FormaZaRent" Height="400" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Background="#F7F7F7" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Unesite vaše podatke:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"/>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Broj telefona:" VerticalAlignment="Center" Width="120"/>
+                <TextBox x:Name="txtBrojTelefona" Width="100" Margin="10"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Trajanje iznajmljivanja:" VerticalAlignment="Center" Width="120"/>
+                <TextBox x:Name="txtTrajanje" Width="50" Margin="10"/>
+                <TextBlock Text="sati" VerticalAlignment="Center" Width="50"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Content="Izračunaj" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Click="IzracunajButton_Click"/>
+
+        <TextBlock FontSize="14" Text="Ukupna cena:" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Grid.Row="3" Margin="0,10,0,0"/>
+        <TextBlock FontSize="14" FontWeight="Bold" x:Name="txtUkupnaCena" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"/>
+
+        <TextBlock x:Name="txtNacinPlacanja" Grid.Row="5" Text="Odaberite način plaćanja:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cmbNacinPlacanja" Grid.Row="6" Width="150" HorizontalAlignment="Center" Visibility="Collapsed">
+            <ComboBoxItem Content="Kartica"/>
+            <ComboBoxItem Content="Gotovina"/>
+            <ComboBoxItem Content="Mobilna plaćanja"/>
+        </ComboBox>
+
+        <StackPanel x:Name="stackOstecenje" Grid.Row="7" Orientation="Horizontal" Margin="10" Visibility="Collapsed" HorizontalAlignment="Center">
+            <TextBlock Text="Bicikl je ostecen" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" />
+            <CheckBox x:Name="chkOstecenje" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center" Margin="5"/>
+        </StackPanel>
+
+        <Button x:Name="btnIznajmi" Content="Iznajmi" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="8" Click="IznajmiButton_Click" Visibility="Collapsed"/>
+    </Grid>
+</Window>
